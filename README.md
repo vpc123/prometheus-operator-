@@ -5,27 +5,26 @@
 **普罗米修斯架构图：**
 ![](https://i.imgur.com/1buyJ1g.png)
 
-** 功能组件解析
+**功能组件解析**
 
 
-** 1. Prometheus Server
+**1. Prometheus Server**
 
 Prometheus Server 负责从 Exporter 拉取和存储监控数据，并提供一套灵活的查询语言（PromQL）供用户使用。
 
 
 
-** 2. Exporter
+**2. Exporter**
 
 Exporter 负责收集目标对象（host, container…）的性能数据，并通过 HTTP 接口供 Prometheus Server 获取。
 
-** 
 
-** 3. 可视化组件
+**3. 可视化组件**
 
 监控数据的可视化展现对于监控方案至关重要。以前 Prometheus 自己开发了一套工具，不过后来废弃了，因为开源社区出现了更为优秀的产品 Grafana。Grafana 能够与 Prometheus 无缝集成，提供完美的数据展示能力。
 
 
-** 4. Alertmanager**
+**4. Alertmanager**
 
 用户可以定义基于监控数据的告警规则，规则会触发告警。一旦 Alermanager 收到告警，会通过预定义的方式发出告警通知。支持的方式包括 Email、PagerDuty、Webhook 等.
 
